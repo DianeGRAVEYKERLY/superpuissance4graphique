@@ -9,6 +9,9 @@ package superpuissance4;
  * @author dia12
  */
 public class fenetreDeJeu extends javax.swing.JFrame {
+    private Joueur[] listeJoueurs= new Joueur[2];
+ private Joueur joueurcourant;
+ private PlateauDeJeu  plateau;
 
     /**
      * Creates new form fenetreDeJeu
@@ -17,6 +20,15 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         initComponents();
         panneau_infojoueurs.setVisible(false);
         panneau_infopartie.setVisible(false);
+       for(int i=5; i>=0;i--){
+           for(int j=0; j<7;j++){
+               Cellule_Graphique CellGraph= new Cellule_Graphique();
+               panneau_grille.add(CellGraph);
+               
+               
+           }
+           
+       }
     }
 
     /**
@@ -102,6 +114,11 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         panneau_creationpartie.add(nom_Joueur2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, -1, -1));
 
         btn_start.setText("Démarrer Partie");
+        btn_start.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_startActionPerformed(evt);
+            }
+        });
         panneau_creationpartie.add(btn_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
         getContentPane().add(panneau_creationpartie, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 200, 120));
@@ -252,6 +269,11 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private void btn_col_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_col_1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_col_1ActionPerformed
+
+    private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
+panneau_infojoueurs.setVisible(true);
+        panneau_infopartie.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_startActionPerformed
 
     /**
      * @param args the command line arguments
