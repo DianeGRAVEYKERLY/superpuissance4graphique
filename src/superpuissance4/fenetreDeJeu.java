@@ -29,6 +29,11 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         panneau_grille = new javax.swing.JPanel();
         panneau_creationpartie = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         panneau_infojoueurs = new javax.swing.JPanel();
         panneau_infopartie = new javax.swing.JPanel();
 
@@ -52,6 +57,22 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
         panneau_creationpartie.setBackground(new java.awt.Color(102, 204, 255));
         panneau_creationpartie.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("nom Joueur1 :");
+        panneau_creationpartie.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        jLabel2.setText("nom Joueur 2:");
+        panneau_creationpartie.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        jTextField1.setText("jTextField1");
+        panneau_creationpartie.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
+
+        jTextField2.setText("jTextField2");
+        panneau_creationpartie.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, -1, -1));
+
+        jButton1.setText("Démarrer Partie");
+        panneau_creationpartie.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
+
         getContentPane().add(panneau_creationpartie, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 160, 80));
 
         panneau_infojoueurs.setBackground(new java.awt.Color(102, 204, 255));
@@ -101,7 +122,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JPanel panneau_creationpartie;
     private javax.swing.JPanel panneau_grille;
     private javax.swing.JPanel panneau_infojoueurs;
