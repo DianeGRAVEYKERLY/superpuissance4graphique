@@ -22,7 +22,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         panneau_infopartie.setVisible(false);
        for(int i=5; i>=0;i--){
            for(int j=0; j<7;j++){
-               Cellule_Graphique CellGraph= new Cellule_Graphique();
+               Cellule_Graphique CellGraph= new Cellule_Graphique(plateau.grille[i][j]);
                panneau_grille.add(CellGraph);
                
                
