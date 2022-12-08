@@ -70,7 +70,9 @@ return -1;
     }
     
     public String lireCouleurDuJeton(int x, int y){ //on lit la couleur du jeton présent dans la case s'il y en a un 
-        grille[x][y].lireCouleurDuJeton();
+        if (grille[x][y].lireCouleurDuJeton() == null){
+            return "vide";
+        }
         return grille[x][y].lireCouleurDuJeton();
     }
     
